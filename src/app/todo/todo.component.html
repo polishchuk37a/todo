@@ -1,0 +1,35 @@
+<div class="container">
+  <form class="my-form" [formGroup]="myForm">
+    <div class="form">
+      <input placeholder="Write your todo" class="input_todo" type="text" formControlName="value"
+             (keyup.enter)="addTask()">
+    </div>
+  </form>
+
+  <div class="list_of_tasks" *ngFor="let task of (todos$ | async); index as i" >
+    <div class="tasks">
+      <h1 class="task_id">{{i+1}}</h1>
+      <h1 class="task" [ngClass]="{'todo-complete': task.isDone}" >{{task.value}}</h1>
+    </div>
+
+    <div class="btn-check_and_remove">
+      <div class="check_task">
+        <input  class="check_btn" type="checkbox" [checked]="task.isDone" (click)="doneTask(task.id)">
+      </div>
+
+      <div class="remove_task">
+        <button class="remove_btn" (click)="removeTask(task.id)">X</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="radio_btn_block">
+    <input type="radio" name="show-task" id="show_all_tasks" (click)="showAllTasks()">
+    <label for="show_all_tasks">Show all tasks</label>
+    <input type="radio" name="show-task" id="show_done_tasks" (click)="showDoneTask()">
+    <label for="show_done_tasks">Show done tasks</label>
+    <input type="radio" name="show-task" id="show_tasks_in_process" (click)="showTaskInProcess()">
+    <label for="show_tasks_in_process">Show tasks in process</label>
+  </div>
+
+</div>

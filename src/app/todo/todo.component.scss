@@ -1,0 +1,107 @@
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+
+  .form{
+    text-align: center;
+
+    .input_todo {
+      padding-left: 30px;
+      width: 500px;
+      height: 60px;
+      background: #151517;
+      color: white;
+      outline: none;
+      border: none;
+      border-radius: 10px 10px 0 0;
+    }
+
+    ::placeholder{
+      color: #8b8b99;
+    }
+  }
+
+  .list_of_tasks{
+    padding-left: 20px;
+    width: 512px;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(69, 79, 110, 0.65);
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    background: #24272e;
+    color: white;
+
+    .tasks{
+      display: flex;
+
+      .task_id{
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 17px;
+        font-family: "Roboto Light", sans-serif;
+      }
+      .task{
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 17px;
+        font-family: "Roboto Light", sans-serif;
+        margin-left: 10px;
+      }
+    }
+
+    .btn-check_and_remove{
+      width: 80px;
+      justify-content: space-between;
+      display: flex;
+
+      .check_task{
+        margin-top: auto;
+        margin-bottom: auto;
+
+        .check_btn{
+          width: 25px;
+          height: 25px;
+          color: #1d8019;
+        }
+      }
+
+      .remove_task{
+        margin-top: auto;
+        margin-bottom: auto;
+
+        .remove_btn{
+          width: 25px;
+          height: 25px;
+          background: #31426b;
+          outline: none;
+          border: none;
+          color: white;
+          border-radius: 50px;
+          margin-right: 15px;
+        }
+        .remove_btn:hover{
+          cursor: pointer;
+          background: #454557;
+        }
+      }
+    }
+  }
+
+  .radio_btn_block{
+    margin: 0 auto;
+    width: 1200px;
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+.todo-complete {
+  text-decoration: line-through;
+  text-decoration-color: orange;
+  text-decoration-thickness: 3px;
+}
+
+
